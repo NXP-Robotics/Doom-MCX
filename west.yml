@@ -1,0 +1,22 @@
+# Copyright 2024 NXP
+# SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+
+manifest:
+
+  group-filter:
+    - +optional
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: 05aa0414f2b04b64f06da5ab38ed85fff6e8976a # zephyr v4.4++
+      import:
+        - name-allowlist:
+          - hal_nxp
+          - cmsis
+          - cmsis_6
+          - segger

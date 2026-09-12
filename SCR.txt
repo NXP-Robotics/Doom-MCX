@@ -1,0 +1,82 @@
+NXP Software Content Register
+
+Package:                    Doom-MCX
+Version:                    1.0
+Outgoing License:           Multiple, per component: GPL-2.0-or-later (engine,
+                            prboom2/), Apache-2.0 OR GPL-2.0-or-later (NXP
+                            files), id Software shareware game data
+                            (wad/doom1.wad). See the entries below.
+License File:               COPYING, LICENSES/,
+                            wad/doom-wad-shareware-license.txt
+Distribution:               Source code and game data only. No firmware images
+                            are distributed by this package; building an image
+                            and flashing it is done by the developer. The
+                            components of a build are listed below.
+Description:                A port of prBoom to NXP MCXN MCU running Zephyr RTOS.
+Release location:           https://github.com/nxphovergames/doom-mcx
+Origin:                     NXP (Apache-2.0 OR GPL-2.0-or-later)
+                            PrBoom 2.5.0 (GNU General Public License v2.0 or later) - http://prboom.sourceforge.net/ (authors in prboom2/AUTHORS)
+                            GBADoom (GNU General Public License v2.0 or later) - https://github.com/doomhack/GBADoom
+                            id Software Doom source, 1999 release (GNU General Public License v2.0 or later) - https://github.com/id-Software/DOOM
+
+
+Components linked by a build
+----------------------------
+
+Name:                       Zephyr RTOS
+Outgoing License:           Apache-2.0
+License File:               LICENSES/Apache-2.0.txt
+Format:                     source code, fetched by west, see west.yml
+Description:                Real-time operating system kernel, drivers and
+                            subsystems the port runs on.
+Origin:                     Zephyr Project - https://github.com/zephyrproject-rtos/zephyr
+
+Name:                       NXP MCUXpresso SDK HAL (hal_nxp)
+Outgoing License:           BSD-3-Clause
+License File:               LICENSES/BSD-3-Clause.txt
+Notices:                    Authoritative copyright notices are in the module
+                            sources fetched by west.
+Format:                     source code, fetched by west, see west.yml
+Description:                MCXN947 device headers, peripheral drivers and
+                            startup code.
+Origin:                     NXP - https://github.com/zephyrproject-rtos/hal_nxp
+
+Name:                       CMSIS
+Outgoing License:           Apache-2.0
+License File:               LICENSES/Apache-2.0.txt
+Format:                     source code, fetched by west, see west.yml
+Description:                Arm Cortex-M core support headers and intrinsics.
+Origin:                     Arm Limited - https://github.com/zephyrproject-rtos/cmsis
+
+Name:                       picolibc
+Outgoing License:           BSD-3-Clause and MIT
+License File:               LICENSES/BSD-3-Clause.txt, LICENSES/MIT.txt
+Notices:                    Authoritative copyright notices are in the
+                            picolibc sources shipped with the Zephyr SDK.
+Format:                     library, supplied prebuilt by the Zephyr SDK
+Description:                C library linked by a build.
+Origin:                     picolibc project - https://github.com/picolibc/picolibc
+
+Name:                       libgcc
+Outgoing License:           GPL-3.0-or-later WITH GCC-exception-3.1
+License File:               LICENSES/GPL-3.0-or-later.txt,
+                            LICENSES/GCC-exception-3.1.txt
+Format:                     library, supplied prebuilt by the Zephyr SDK
+Description:                Compiler runtime support routines.
+Origin:                     GNU Compiler Collection - https://gcc.gnu.org
+
+
+Game data
+---------
+
+Name:                       Doom shareware IWAD (wad/doom1.wad)
+Outgoing License:           None granted by NXP. Game data is copyright id
+                            Software; the shareware license text is reproduced
+                            in the License File.
+License File:               wad/doom-wad-shareware-license.txt
+Format:                     binary game data (IWAD)
+Description:                Game data of the Doom shareware episode, converted
+                            with GbaWadUtil (GBADoom project) to the layout the
+                            engine reads. Not part of the GPL-licensed engine;
+                            flashed as a separate file.
+Origin:                     id Software

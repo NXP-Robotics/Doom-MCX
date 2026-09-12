@@ -1,3 +1,7 @@
+/* Status bar graphic from the GBADoom project (https://github.com/doomhack/GBADoom),
+ * as shipped with GBADoom; no license notice accompanied it. Redistributed here as
+ * received. NXP claims no copyright in this file.
+ */
 //doomhack's old hud
 //const unsigned char gfx_stbar[6000] =
 
