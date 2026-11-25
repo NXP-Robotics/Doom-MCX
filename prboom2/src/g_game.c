@@ -241,12 +241,11 @@ void G_BuildTiccmd(ticcmd_t* cmd)
 
     if(_g->gamekeydown[key_toggle])
     {
-        printf("toggle\n");
         _g->gamekeydown[key_toggle] = 0;
         newweapon = P_WeaponCycleUp(&_g->player);
     }
 
-    if(_g->gamekeydown[key_use] && _g->gamekeydown[key_straferight])
+    else if(_g->gamekeydown[key_use] && _g->gamekeydown[key_straferight])
     {
         newweapon = P_WeaponCycleUp(&_g->player);
         side -= sidemove[speed]; //Hack cancel strafe.
